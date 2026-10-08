@@ -1,273 +1,291 @@
-<!DOCTYPE html>
-<html lang="pt">
+/* Configuração geral */
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-    <title>O Meu Portefólio</title>
+html {
+    scroll-behavior: smooth;
+}
 
-    <link rel="stylesheet" href="style 2.css">
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #222;
+    background-color: #ffffff;
+}
 
-</head>
 
-<body>
+/* Cabeçalho */
 
-<!-- Cabeçalho -->
-<header>
-    <nav>
-        <h2>O Meu Portefólio</h2>
+header {
+    background-color: #222;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
-        <ul>
-            <li><a href="#sobre">Sobre mim</a></li>
-            <li><a href="#competencias">Competências</a></li>
-            <li><a href="#projetos">Projetos</a></li>
-            <li><a href="#cv">CV</a></li>
-            <li><a href="#contactos">Contactos</a></li>
-        </ul>
-    </nav>
-</header>
+nav {
+    max-width: 1100px;
+    margin: auto;
+    padding: 15px 20px;
 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-<!-- Apresentação -->
-<section class="hero">
-    <div>
-        <h1>Olá, eu sou <span>Luís Lobo</span></h1>
+nav h2 {
+    color: #4fc3f7;
+}
 
-        <p>
-            Ex-jogador do Gens
-        </p>
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
 
-        <a href="#cv" class="botao">Ver o meu CV</a>
-    </div>
-</section>
+nav a {
+    color: white;
+    text-decoration: none;
+}
 
+nav a:hover {
+    color: #4fc3f7;
+}
 
-<!-- Sobre mim -->
-<section id="sobre" class="secao">
-    <h2>Sobre mim</h2>
 
-    <p>
-        Sou o Luís, não curto de fazer nada que tenha a ver com a escola,
-        mas curto de vir porque saio de casa e pelo menos convive-se um bocado.
-    </p>
-</section>
+/* Página inicial */
 
+.hero {
+    min-height: 500px;
 
-<!-- Competências -->
-<section id="competencias" class="secao fundo">
-    <h2>Competências</h2>
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    <div class="cards">
+    text-align: center;
 
-        <div class="card">
-            <h3>Jogos</h3>
-            <p>Jogar FIFA, Fortnite e Roblox.</p>
-        </div>
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
 
-        <div class="card">
-            <h3>Bebida</h3>
-            <p>Beber álcool e não ficar bêbado.</p>
-        </div>
+    padding: 40px 20px;
+}
 
-        <div class="card">
-            <h3>Escola</h3>
-            <p>Competência de chegar sempre atrasado às aulas.</p>
-        </div>
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
 
-    </div>
-</section>
+.hero h1 span {
+    color: #4fc3f7;
+}
 
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
 
-<!-- Projetos -->
-<section id="projetos" class="secao">
-    <h2>Projetos</h2>
 
-    <div class="cards">
+/* Botões */
 
-        <div class="card">
-            <h3>Banco Alimentar</h3>
-            <p>
-                Banco Alimentar no Lidl enquanto jogador profissional da ala.
-            </p>
-        </div>
+.botao,
+button {
+    display: inline-block;
 
-        <div class="card">
-            <h3>Participação no PMAT</h3>
-            <p>
-                Participei no PMAT com o meu irmão João, só para ir a Aveiro
-                ver se via o Wuant.
-            </p>
-        </div>
+    background-color: #4fc3f7;
+    color: #111;
 
-    </div>
-</section>
+    border: none;
+    border-radius: 5px;
 
+    padding: 12px 22px;
 
-<!-- CV -->
-<section id="cv" class="secao fundo">
+    font-size: 16px;
+    font-weight: bold;
 
-    <h2>Curriculum Vitae</h2>
+    text-decoration: none;
+    cursor: pointer;
+}
 
-    <div class="cv">
+.botao:hover,
+button:hover {
+    background-color: #81d4fa;
+}
 
-        <div class="cv-cabecalho">
 
-            <h1>Luís Lobo</h1>
+/* Secções */
 
-            <p>Ex-titular do Gens</p>
+.secao {
+    max-width: 1100px;
+    margin: auto;
 
-            <p>
-                a115178@aeg1.pt<br>
-                967 455 006<br>
-                Gens, Portugal
-            </p>
+    padding: 70px 20px;
+}
 
-        </div>
+.secao h2 {
+    text-align: center;
+    margin-bottom: 35px;
 
+    font-size: 32px;
+    color: #203a43;
+}
 
-        <div class="cv-secao">
+.fundo {
+    max-width: none;
+    background-color: #f2f5f7;
+}
 
-            <h3>Eu</h3>
+.fundo > h2,
+.fundo > .cards,
+.fundo > .cv,
+.fundo > .botoes-cv {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-            <p>
-                Homem humilde, 1,95 m, gosto de Lana Del Rey,
-                odeio cólicas e amo animais.
-            </p>
 
-        </div>
+/* Cards */
 
+.cards {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 
-        <div class="cv-secao">
+.card {
+    background-color: white;
 
-            <h3>Formação Académica</h3>
+    width: 300px;
+    padding: 25px;
 
-            <h4>Curso Técnico de Gestão de Sistemas Informáticos</h4>
-            <p>ESG — 2025-presente</p>
+    border-radius: 10px;
 
-            <h4>Ciências e Tecnologias</h4>
-            <p>ESG — 2024-2025</p>
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 
-        </div>
+    transition: transform 0.2s;
+}
 
+.card:hover {
+    transform: translateY(-5px);
+}
 
-        <div class="cv-secao">
+.card h3 {
+    color: #203a43;
+    margin-bottom: 10px;
+}
 
-            <h3>Competências</h3>
 
-            <ul>
-                <li>Jogar FIFA</li>
-                <li>Jogar Fortnite</li>
-                <li>Jogar Roblox</li>
-                <li>Beber e não ficar bêbado</li>
-                <li>Futebol</li>
-                <li>Altinha</li>
-            </ul>
+/* CV */
 
-        </div>
+.cv {
+    background-color: white;
 
+    padding: 40px;
 
-        <div class="cv-secao">
+    border-radius: 10px;
 
-            <h3>Experiência / Projetos</h3>
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 
-            <h4>Banco Alimentar</h4>
+    max-width: 850px !important;
+}
 
-            <p>
-                Participação no Banco Alimentar no Lidl enquanto jogador
-                profissional da ala.
-            </p>
+.cv-cabecalho {
+    text-align: center;
 
-            <h4>PMAT</h4>
+    border-bottom: 2px solid #4fc3f7;
 
-            <p>
-                Participação no PMAT com o meu irmão João, numa viagem a
-                Aveiro.
-            </p>
+    padding-bottom: 25px;
+    margin-bottom: 30px;
+}
 
-        </div>
+.cv-cabecalho h1 {
+    font-size: 36px;
+    color: #203a43;
+}
 
-    </div>
+.cv-cabecalho p {
+    color: #555;
+}
 
+.cv-secao {
+    margin-bottom: 30px;
+}
 
-    <!-- BOTÕES DO CV -->
-    <div class="botoes-cv">
+.cv-secao h3 {
+    color: #203a43;
 
-        <button onclick="mostrarCV()">
-            Mostrar / Ocultar CV
-        </button>
+    border-bottom: 1px solid #ddd;
 
-        <!-- NOVO BOTÃO PARA ABRIR O PDF -->
-        <a href="cv.pdf" target="_blank" class="botao">
-            Entrar no Currículo PDF
-        </a>
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+}
 
-        <!-- BOTÃO PARA DESCARREGAR O PDF -->
-        <a href="cv.pdf" download class="botao">
-            Descarregar CV em PDF
-        </a>
+.cv-secao h4 {
+    margin-top: 12px;
+}
 
-    </div>
+.cv-secao ul {
+    padding-left: 25px;
+}
 
-</section>
 
+/* Botões do CV */
 
-<!-- Contactos -->
-<section id="contactos" class="secao">
+.botoes-cv {
+    margin-top: 30px;
 
-    <h2>Contactos</h2>
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
 
-    <p>
-        Email:
-        <a href="mailto:a115178@aeg1.pt">
-            a115178@aeg1.pt
-        </a>
-    </p>
 
-    <p>
-        Número:
-        <a href="https://github.com/" target="_blank">
-            967455996
-        </a>
-    </p>
+/* Contactos */
 
-    <p>
-        Instagram:
-        <a href="#" target="_blank">
-            __lobiito__
-        </a>
-    </p>
+#contactos a {
+    color: #1976a3;
+}
 
-</section>
 
+/* Rodapé */
 
-<!-- Rodapé -->
-<footer>
+footer {
+    text-align: center;
 
-    <p>&copy; 2026 Luís Lobo.</p>
+    background-color: #222;
+    color: white;
 
-</footer>
+    padding: 25px;
+}
 
 
-<script>
+/* Telemóveis */
 
-    function mostrarCV() {
+@media (max-width: 700px) {
 
-        const cv = document.querySelector(".cv");
-
-        if (cv.style.display === "none") {
-
-            cv.style.display = "block";
-
-        } else {
-
-            cv.style.display = "none";
-
-        }
-
+    nav {
+        flex-direction: column;
+        gap: 15px;
     }
 
-</script>
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 
-</body>
-</html>
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .cv {
+        padding: 25px;
+    }
+}
+
