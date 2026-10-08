@@ -1,9 +1,18 @@
-<!DOCTYPE html> <html lang="pt"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>O Meu Portefólio</title>
+<!DOCTYPE html>
+<html lang="pt">
 
-<link rel="stylesheet" href="style 2.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-</head> <body>
+    <title>O Meu Portefólio</title>
+
+    <link rel="stylesheet" href="style 2.css">
+
+</head>
+
+<body>
+
 <!-- Cabeçalho -->
 <header>
     <nav>
@@ -19,6 +28,7 @@
     </nav>
 </header>
 
+
 <!-- Apresentação -->
 <section class="hero">
     <div>
@@ -32,6 +42,7 @@
     </div>
 </section>
 
+
 <!-- Sobre mim -->
 <section id="sobre" class="secao">
     <h2>Sobre mim</h2>
@@ -41,6 +52,7 @@
         mas curto de vir porque saio de casa e pelo menos convive-se um bocado.
     </p>
 </section>
+
 
 <!-- Competências -->
 <section id="competencias" class="secao fundo">
@@ -66,6 +78,7 @@
     </div>
 </section>
 
+
 <!-- Projetos -->
 <section id="projetos" class="secao">
     <h2>Projetos</h2>
@@ -90,13 +103,16 @@
     </div>
 </section>
 
+
 <!-- CV -->
 <section id="cv" class="secao fundo">
+
     <h2>Curriculum Vitae</h2>
 
     <div class="cv">
 
         <div class="cv-cabecalho">
+
             <h1>Luís Lobo</h1>
 
             <p>Ex-titular do Gens</p>
@@ -106,18 +122,24 @@
                 967 455 006<br>
                 Gens, Portugal
             </p>
+
         </div>
 
+
         <div class="cv-secao">
+
             <h3>Eu</h3>
 
             <p>
                 Homem humilde, 1,95 m, gosto de Lana Del Rey,
                 odeio cólicas e amo animais.
             </p>
+
         </div>
 
+
         <div class="cv-secao">
+
             <h3>Formação Académica</h3>
 
             <h4>Curso Técnico de Gestão de Sistemas Informáticos</h4>
@@ -125,9 +147,12 @@
 
             <h4>Ciências e Tecnologias</h4>
             <p>ESG — 2024-2025</p>
+
         </div>
 
+
         <div class="cv-secao">
+
             <h3>Competências</h3>
 
             <ul>
@@ -138,38 +163,58 @@
                 <li>Futebol</li>
                 <li>Altinha</li>
             </ul>
+
         </div>
 
+
         <div class="cv-secao">
+
             <h3>Experiência / Projetos</h3>
 
             <h4>Banco Alimentar</h4>
+
             <p>
                 Participação no Banco Alimentar no Lidl enquanto jogador
                 profissional da ala.
             </p>
 
             <h4>PMAT</h4>
+
             <p>
                 Participação no PMAT com o meu irmão João, numa viagem a
                 Aveiro.
             </p>
+
         </div>
 
     </div>
 
-    <div class="botoes-cv">
-        <button onclick="mostrarCV()">Mostrar / Ocultar CV</button>
 
+    <!-- BOTÕES DO CV -->
+    <div class="botoes-cv">
+
+        <button onclick="mostrarCV()">
+            Mostrar / Ocultar CV
+        </button>
+
+        <!-- NOVO BOTÃO PARA ABRIR O PDF -->
+        <a href="cv.pdf" target="_blank" class="botao">
+            Entrar no Currículo PDF
+        </a>
+
+        <!-- BOTÃO PARA DESCARREGAR O PDF -->
         <a href="cv.pdf" download class="botao">
             Descarregar CV em PDF
         </a>
+
     </div>
 
 </section>
 
+
 <!-- Contactos -->
 <section id="contactos" class="secao">
+
     <h2>Contactos</h2>
 
     <p>
@@ -182,34 +227,47 @@
     <p>
         Número:
         <a href="https://github.com/" target="_blank">
-           967455006
+            967455996
         </a>
     </p>
 
     <p>
         Instagram:
         <a href="#" target="_blank">
-           __lobiito__
+            __lobiito__
         </a>
     </p>
+
 </section>
+
 
 <!-- Rodapé -->
 <footer>
+
     <p>&copy; 2026 Luís Lobo.</p>
+
 </footer>
 
+
 <script>
+
     function mostrarCV() {
+
         const cv = document.querySelector(".cv");
 
         if (cv.style.display === "none") {
+
             cv.style.display = "block";
+
         } else {
+
             cv.style.display = "none";
+
         }
+
     }
+
 </script>
 
-</body> </html>
-
+</body>
+</html>
